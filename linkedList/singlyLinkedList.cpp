@@ -43,32 +43,45 @@ void insertAtIndex(Node* &head, int data, int index){
 	head = temp;
 }
 
-int searchElementByIndex(Node *head, int index){
-	if(index < 1){
-		cout<<"can't find at index < 1"<<endl;
-		return 0;
-	}
+// int searchElementByIndex(Node *head, int index){
+// 	if(index < 1){
+// 		cout<<"can't find at index < 1"<<endl;
+// 		return 0;
+// 	}
 
-	for(int i = 0; i < index-1; i++){
-		if(head == NULL){
-			cout<<"index is out of range!!!"<<endl;
-			return 0;
+// 	for(int i = 0; i < index-1; i++){
+// 		if(head == NULL){
+// 			cout<<"index is out of range!!!"<<endl;
+// 			return 0;
+// 		}
+// 			head = head->next;
+// 	}
+// 		return head->data;
+// }
+
+int searchElementByValue(Node *head, int data){
+	int index = 1;
+	while(head){
+		if(head->data == data){
+			return index; 
 		}
-			head = head->next;
+		index++;
 	}
-		return head->data;
+	return 0;
 }
 
-// int searchElementByValue(Node *head, int data){
-// 	int index = 1;
-// 	while(head != NULL){
-// 		if(head->data == data){
-// 			return index; 
-// 		}
-// 		index++;
-// 	}
-// 	return 0;
-// }
+void reverse(Node* &head){
+	Node *prev = NULL;
+	Node *curr = head;
+
+	while(curr){
+		Node *next = curr->next;
+		curr->next = prev;
+		prev = curr;
+		curr = next;
+	}
+	head = prev;
+}
 
 
 int main(){
@@ -88,9 +101,11 @@ int main(){
 	print(head);
 	cout<<endl;
 	
-	int a = searchElementByIndex(head, 7);
+	int a = searchElementByValue(head, 19);
 	cout<<a<<endl;
 
+	reverse(head);
+	print(head);
 
 	
 

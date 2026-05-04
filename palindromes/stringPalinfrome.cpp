@@ -3,7 +3,9 @@ using namespace std;
 
 bool isPalindrome(string str){
 	cout<<"String str = "<<str<<endl;
+
 	
+
 	return 1;
 }
 

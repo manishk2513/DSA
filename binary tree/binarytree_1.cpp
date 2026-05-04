@@ -63,15 +63,25 @@ void postorder(Node *root){
 }
 
 
+
 int main(){
 	Node *root = NULL;
 	insert(root);
 
+	cout<<"=== Inorder ==="<<endl;
 	inorder(root);
 	cout<<"----------------"<<endl;
+	cout<<"=== Preorder ==="<<endl;
 	preorder(root);
 	cout<<"----------------"<<endl;
+	cout<<"=== Postorder ==="<<endl;
 	postorder(root);
+
+	cout<<"enter node to search by value: ";
+	int target;
+	cin>>target;
+	cout<<"target node found at: "<<searchByValue(root, target);
+
 
 	return 0;
 }
