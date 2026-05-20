@@ -1,0 +1,131 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class HashTable {
+private:
+    enum State { EMPTY, OCCUPIED, DELETED };
+
+    struct Slot {
+        int key;
+        State state;
+        Slot() : key(0), state(EMPTY) {}
+    };
+
+    vector<Slot> table;
+    int size;
+    int c1;
+    int c2;
+
+public:
+    HashTable(int m, int firstCoeff, int secondCoeff)
+        : size(m), c1(firstCoeff), c2(secondCoeff), table(m) {}
+
+    int hashFunction(int key) const {
+        return key % size;
+    }
+
+    void insert(int key) {
+        for (int i = 0; i < size; i++) {
+            int index = (hashFunction(key) + c1 * i + c2 * i * i) % size;
+            if (index < 0) {
+                index += size;
+            }
+            if (table[index].state == EMPTY || table[index].state == DELETED) {
+                table[index].key = key;
+                table[index].state = OCCUPIED;
+                cout << key << " inserted at index " << index << '\n';
+                return;
+            }
+        }
+        cout << "Hash table overflow.\n";
+    }
+
+    bool search(int key) const {
+        for (int i = 0; i < size; i++) {
+            int index = (hashFunction(key) + c1 * i + c2 * i * i) % size;
+            if (index < 0) {
+                index += size;
+            }
+            if (table[index].state == EMPTY) {
+                return false;
+            }
+            if (table[index].state == OCCUPIED && table[index].key == key) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    bool remove(int key) {
+        for (int i = 0; i < size; i++) {
+            int index = (hashFunction(key) + c1 * i + c2 * i * i) % size;
+            if (index < 0) {
+                index += size;
+            }
+            if (table[index].state == EMPTY) {
+                return false;
+            }
+            if (table[index].state == OCCUPIED && table[index].key == key) {
+                table[index].state = DELETED;
+                cout << key << " deleted from index " << index << '\n';
+                return true;
+            }
+        }
+        return false;
+    }
+
+    void display() const {
+        cout << "Quadratic Probing Table:\n";
+        for (int i = 0; i < size; i++) {
+            cout << i << " : ";
+            if (table[i].state == OCCUPIED) {
+                cout << table[i].key;
+            } else if (table[i].state == DELETED) {
+                cout << "Deleted";
+            } else {
+                cout << "Empty";
+            }
+            cout << '\n';
+        }
+    }
+};
+
+int main() {
+    int size, c1, c2;
+    cout << "Enter table size: ";
+    cin >> size;
+    cout << "Enter c1 and c2: ";
+    cin >> c1 >> c2;
+
+    HashTable table(size, c1, c2);
+    int choice;
+
+    do {
+        cout << "\n1. Insert\n2. Search\n3. Delete\n4. Display\n5. Exit\nChoose: ";
+        cin >> choice;
+
+        if (choice == 1) {
+            int key;
+            cout << "Enter key: ";
+            cin >> key;
+            table.insert(key);
+        } else if (choice == 2) {
+            int key;
+            cout << "Enter key to search: ";
+            cin >> key;
+            cout << (table.search(key) ? "Key found.\n" : "Key not found.\n");
+        } else if (choice == 3) {
+            int key;
+            cout << "Enter key to delete: ";
+            cin >> key;
+            if (!table.remove(key)) {
+                cout << "Key not found.\n";
+            }
+        } else if (choice == 4) {
+            table.display();
+        }
+    } while (choice != 5);
+
+    return 0;
+}
