@@ -83,6 +83,13 @@ void reverse(Node* &head){
 	head = prev;
 }
 
+void deleteList(Node* &head) {
+    while (head != nullptr) {
+        Node* nextNode = head->next;
+        delete head;
+        head = nextNode;
+    }
+}
 
 int main(){
 
@@ -108,7 +115,7 @@ int main(){
 	print(head);
 
 	
-
+	deleteList(head); // delete the list after whole program execution to prevent memory leak
 	return 0;
 }
 

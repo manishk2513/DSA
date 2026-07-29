@@ -1,0 +1,126 @@
+=========== 1. THE GREAT INDIAN WEDDING
+
+Raju has been given the most dangerous job at his sister’s wedding: managing the VIP dinner buffet. There are N highly egoistic relatives, numbered from 1 to N.
+
+Indian relatives have strict rules about respect and hierarchy. Raju has a list of M demands. Each rule states that Relative U absolutely MUST be served their Paneer Tikka before Relative V.
+
+Raju's little cousin accidentally spilled chutney all over the master list and shuffled the rules around. Raju is terrified that the rules might now form a trap. For example, if Uncle Sharma refuses to eat until Verma eats, Verma refuses to eat until Gupta eats, and Gupta refuses to eat until Sharma eats... they will all just stand in a circle glaring at each other forever!
+
+If such a deadlock happens, the aunties will start gossiping, the uncles will start shouting, and there will be an ultimate wedding Explosion! of drama.
+
+Given the number of relatives and the list of rules, write a program to help Raju figure out if it's possible to feed everyone peacefully, or if a drama explosion is inevitable.
+
+Input Format
+
+The first line contains two space-separated integers, N (the number of relatives) and M (the number of rules).
+The next M lines each contain two space-separated integers, U and V, indicating that Relative U must be served before Relative V.
+Constraints
+
+1 <= N <= 100,000
+0 <= M <= 100,000
+1 <= U, V <= N
+U != V
+There may be multiple identical rules, but they don't change the underlying drama.
+Output Format
+
+Print "Safe" if there is a valid order to serve everyone without breaking any rules.
+Print "Explosion!" if the rules contain a contradiction (a cycle of stubborn relatives).
+Sample Input 0
+
+5 5
+1 3
+2 4
+3 5
+4 5
+1 4
+Sample Output 0
+
+Safe
+Sample Input 1
+
+4 4
+1 2
+2 3
+3 4
+4 2
+Sample Output 1
+
+Explosion!
+
+=================== 2. PEAK INDEX IN A MOUNTAIN ARRAY
+
+You are given an integer array arr that is guaranteed to be a mountain array. An array arr is a mountain array if and only if:
+arr.length >= 3
+There exists some index i (0 < i < arr.length - 1) such that:
+	arr[0] < arr[1] < ... < arr[i - 1] < arr[i]
+	arr[i] > arr[i+1] > ... >arr[arr. length - 1]
+
+Given a mountain array arr, return the index i such that it is the peak of the mountain. 
+
+Requirement: You must write an algorithm that runs in O(log N) time complexity.  
+
+Input Format
+
+Line 1: An integer N (the length of the array).
+Line 2: N space-separated integers representing the elements of the mountain array arr.
+
+Constraints
+
+3 < arr.length < 105
+0 ≤ arr[i] < 106
+
+It is guaranteed that arr is a valid mountain array. 
+
+Output Format
+A single integer representing the index of the peak element.
+
+Sample Input O
+
+4
+0 2 1 0
+
+Sample Output 0
+
+1
+
+========= 3. ARCHIPELAGOS OF THE SCATTERED SEA
+
+You are a cartographer tasked with mapping the Scattered Sea. The sea contains N islands,  and there are M ancient stone bridges connecting certain pairs of islands.
+A group of islands is considered a single Archipelago if you can travel between any two islands in that group using a sequence of stone bridges. If an island has no bridges connected to it, it is considered its own isolated archipelago.
+
+Given the number of islands and the list of bridges, determine the total number of distinct  archipelagos in the Scattered Sea.  
+
+Input Format
+The first line contains two space-separated integers, N and M (the number of islands and the number of bridges).
+The next M lines each contain two space-separated integers u and v, indicating a two- way bridge connecting island u and island v.  
+
+Constraints  
+
+1 <= N <= 10^5
+0 <= M < 2 * 10^5
+1 <= u, v <= N
+
+There can be multiple bridges between the same pair of islands, and a bridge might connect an island to itself (self-loops).
+Output Format
+
+Print a single integer denoting the total number of archipelagos.
+
+Sample Input 0
+
+6 4
+1 2
+2 3
+4 5
+5 4
+Sample Output 0
+
+3
+Explanation 0
+
+There are 6 islands in total.
+
+Islands 1, 2, and 3 are connected, forming the first archipelago.
+
+Islands 4 and 5 are connected to each other (with a redundant bridge between them), forming the second archipelago.
+
+Island 6 has no bridges connected to it, forming a third, isolated archipelago. Total archipelagos = 3.

@@ -35,15 +35,16 @@ void QuickSort(int arr[], int low, int high){
 int main(){
 
 	int arr[] = {3, -2, 4, 0, 1, 4, 5};
+	int size = sizeof(arr) / sizeof(arr[0]);
 
-	for(int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++){
+	for(int i = 0; i < size; i++){
 		cout<<arr[i]<<" ";
 	}
 	cout<<endl;
 
 	QuickSort(arr, 0, 6);
 
-	for(int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++){
+	for(int i = 0; i < size; i++){
 		cout<<arr[i]<<" ";
 	}
 

@@ -1,0 +1,224 @@
+ARRAYS	------------------------
+	1	Sliding window maximum
+	2	Reverse pairs
+	3	Largest rectangle in a histogram
+	4	
+	5	Majority Element
+	6	Repeat & missing number
+	7	Merge 2 sorted array without xtra space
+	8	Single Number
+	9	Stock Buy & Sell
+	10	Kadane's Algorithm
+	11	Pow xn
+	12	Container with most water
+	13	Sort array of 0s, 1s & 2s
+	14	3Sum
+	15	4Sum
+	16	Search a 2D matrix 
+	17	Next permutation
+	18	Merge overlapping intervals
+	19	Longest substring without repeating
+	20	Set matrix zeroes
+	21	Word search
+	22	Product of array except itself
+	23	Subarray sum equals k
+	24	Find Duplicate
+	25	Count Inversions
+	26	Trapping Rainwater
+	27	
+	28	
+	29	
+BINARY SEARCH	------------------------
+	30	Allocate Minimum Pages (Book Allocation)
+	31	Painter’s Partition
+	32	Aggressive cows
+	33	Median of 2 Sorted Arrays
+	34	Search in rotated sorted
+	35	Peak index in mountain array
+	36	Single element in sorted array
+	37	
+	38	
+STRINGS	------------------------
+	39	
+	40	String Compression
+	41	Group Anagrams
+	42	Minimum Window Substring
+	43	Kmp Algorithm
+	44	Robin Karp
+	45	Valid Palindrome
+	46	Longest Common Prefix
+	47	Valid Anagram
+	48	Reverse Words in String
+	49	Remove All Occurrences of String
+	50	Permutation in String
+	51	
+RECURSION & BACKTRACKING	------------------------
+	52	Combination Sum I
+	53	Combination Sum II
+	54	Palindrome Partitioning
+	55	Knights Tour
+	56	M Coloring
+	57	Rat in a Maze
+	58	Subsets II
+	59	Merge Sort
+	60	N Queens
+	61	Sudoku Solver
+	62	Count Inversions
+	63	
+	64	
+LINKED LIST	------------------------
+	65	Reverse a LL
+	66	Middle of LL
+	67	Merge 2 Sorted LL
+	68	Check if LL Is Palindrome or Not
+	69	Detect Cycle in LL
+	70	Remove Cycle in LL
+	71	Flatten LL
+	72	Clone LL with Random Pointers
+	73	Add 2 Numbers
+	74	Reverse Linked List 2
+	75	LRU Cache
+	76	Rotate a LL
+	77	Reverse Nodes in K Groups
+	78	
+	79	
+STACK & QUEUE	------------------------
+	80	Implement Stack using Queue
+	81	Implement Queue using Stack
+	82	Next Greater Element I
+	83	Valid Parenthesis
+	84	1st Non Repeating in Stream
+	85	Reverse 1st K Elements of Queue
+	86	Time needed to Buy Tickets 
+	87	Next Greater Element II
+	88	Previous Smaller Element
+	89	Celebrity Problem 
+	90	Get Min Element from Stack
+	91	Circular Tour / Gas Station
+	92	Rotten Oranges
+	93	Stock Span
+	94	Max Area in Histogram
+	95	
+	96	
+BINARY TREES	------------------------
+	97	Inorder
+	98	Preorder
+	99	Postorder
+	100	Symmetric Tree
+	101	Minimum Distance between Nodes
+	102	Are 2 Trees Identical or Not
+	103	Morris Inorder Traversal
+	104	Diameter
+	105	Check if Tree is Height Balanced
+	106	Subtree of Another Tree
+	107	Check if BT Mirror of itself or not
+	108	Top View of a Tree
+	109	Bottom View of a Tree
+	110	Level Order 
+	111	Kth Level of Tree
+	112	LCA
+	113	Transform to Sum Tree
+	114	Construct BT from Inorder & Pre order
+	115	Construct BT from Inorder & Post order
+	116	Flatten BT to LL
+	117	Max Width of BT
+	118	Zig Zag Traversal of BT
+	119	Max Path Sum
+	120	Kth Ancestor
+	121	
+	122	
+BST	------------------------
+	123	Kth largest in BST
+	124	Sorted Array to Balanced BST
+	125	Validate BST
+	126	Kth Smallest in BST
+	127	LCA in BST
+	128	Populate Next Right Pointers
+	129	Recover BST
+	130	Construct from Preorder
+	131	BST Iterator
+	132	Flatten BST to Sorted list
+	133	Inorder Successor
+	134	Inorder Predecessor
+	135	Largest BST in BT 
+	136	Serialize & Deserialize BST
+	137	Merge 2 BSTS 
+	138	
+	139	
+HEAPS	------------------------
+	140	Merge K Sorted Arrays
+	141	K most Frequent Elements
+	142	Heap Sort
+	143	Kth Smallest Element
+	144	Median from Stream
+	145	Smallest Range in K Sorted List
+	146	
+	147	
+TRIE	------------------------
+	148	Longest Common Prefix
+	149	Word Break Problem
+	150	Implement a Phone Directory
+	151	Implement a Trie
+	152	Longest String with All Prefix
+	153	
+	154	
+GRAPH	------------------------
+	155	Flood Fill Algorithm
+	156	BFS
+	157	DFS
+	158	Detect cycle in undirected using BFS
+	159	Detect cycle in undirected using DFS
+	160	Detect cycle in directed using BFS
+	161	Detect cycle in directed using DFS
+	162	Topological Sorting (DFS)
+	163	Prim's Algorithm (MST)
+	164	Bellman Ford Algorithm
+	165	Floyd Warshall Algo
+	166	Kosaraju Strongly Connected Components
+	167	Check Bi-partite Graph
+	168	Number of Islands
+	169	Rotten Oranges
+	170	01 Matrix
+	171	Course Schedule I & II
+	172	Alien Dictionary
+	173	Cheapest Flights within K Stops
+	174	Clone a Graph
+	175	Most Stones Removed
+	176	Number of Provinces
+	177	Number of Ways to Arrive at Destination
+	178	Topoplogical Sorting (BFS)
+	179	Dijkstra's Algorithm
+	180	Kruskal's Algorithm (MST)
+	181	
+	182	
+DP	------------------------
+	183	Buy & Sell Stocks I
+	184	0-1 Knapsack
+	185	Target Sum Subset
+	186	Unbounded Knapsack
+	187	Coin Change
+	188	Longest Common Subsequence
+	189	Longest Common Substring
+	190	Edit Distance
+	191	Longest Increasing Subsequence
+	192	Palindromic Partitioning (MCM)
+	193	Max Product Subarray
+	194	Unique BSTs
+	195	Longest Palindromic Subsequence
+	196	Buy & Sell Stocks II
+	197	Nth Catalan
+	198	Minimum Partitioning
+	199	Wildcard Pattern Matching
+	200	Rod Cutting
+	201	Egg Dropping
+	202	Longest Bitonic Subsequence
+	203	MCM
+	204	
+	205	
+GREEDY	------------------------
+	206	maximum length of pair chain
+	207	Activity Selection
+	208	Job Scheduling
+	209	Assign Cookies
+	210	Indian Coins
+	211	Fractional Knapsack
